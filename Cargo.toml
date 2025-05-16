@@ -4,7 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-ndarray = "0.15"
-ndarray-linalg = { version = "0.16", features = ["openblas"] }
-num-complex = "0.4"
-meval = "0.2"
+# num_cpus = "1.13"
+# ndarray = "0.15"
+# ndarray-linalg = { version = "0.16", features = ["openblas"] }
+# num-complex = "0.4"
+# meval = "0.2"
