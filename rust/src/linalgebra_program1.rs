@@ -2,17 +2,15 @@ use std::io;
 
 fn lu_decompose(a: &mut Vec<Vec<f64>>) -> (Vec<Vec<f64>>, Vec<Vec<f64>>) {
     let n = a.len();
-    let mut l = vec![vec![0.0; n]; n]; // Lower triangular matrix
-    let mut u = a.clone(); // Upper triangular matrix
+    let mut l = vec![vec![0.0; n]; n];
+    let mut u = a.clone();
 
     for i in 0..n {
-        l[i][i] = 1.0; // Set the diagonal of L to 1
+        l[i][i] = 1.0;
     }
 
-    // Perform LU Decomposition without pivoting
     for i in 0..n {
         for j in i..n {
-            // Calculate the upper triangular matrix U
             let mut sum = 0.0;
             for k in 0..i {
                 sum += l[i][k] * u[k][j];
@@ -21,7 +19,6 @@ fn lu_decompose(a: &mut Vec<Vec<f64>>) -> (Vec<Vec<f64>>, Vec<Vec<f64>>) {
         }
 
         for j in i + 1..n {
-            // Calculate the lower triangular matrix L
             let mut sum = 0.0;
             for k in 0..i {
                 sum += l[j][k] * u[k][i];
@@ -29,7 +26,6 @@ fn lu_decompose(a: &mut Vec<Vec<f64>>) -> (Vec<Vec<f64>>, Vec<Vec<f64>>) {
             l[j][i] = (u[j][i] - sum) / u[i][i];
         }
     }
-
     (l, u)
 }
 
@@ -37,8 +33,6 @@ fn lu_back_substitution(l: &Vec<Vec<f64>>, u: &Vec<Vec<f64>>, b: &Vec<f64>) -> V
     let n = b.len();
     let mut y = vec![0.0; n];
     let mut x = vec![0.0; n];
-
-    // Forward substitution (Ly = b)
     for i in 0..n {
         y[i] = b[i];
         for j in 0..i {
@@ -46,7 +40,6 @@ fn lu_back_substitution(l: &Vec<Vec<f64>>, u: &Vec<Vec<f64>>, b: &Vec<f64>) -> V
         }
     }
 
-    // Backward substitution (Ux = y)
     for i in (0..n).rev() {
         x[i] = y[i];
         for j in i + 1..n {
@@ -90,15 +83,12 @@ fn main() {
 
     let mut matrix_copy = matrix.clone();
 
-    // LU Decomposition
     let (l, u) = lu_decompose(&mut matrix_copy);
 
-    // Display LU Decomposed matrices
     println!("LU Decomposed Matrix:");
     println!("L: {:?}", l);
     println!("U: {:?}", u);
 
-    // Inverse calculation by solving Ax = I for each column
     let mut inverse = vec![vec![0.0; size]; size];
     for i in 0..size {
         let mut b = vec![0.0; size];
@@ -109,16 +99,13 @@ fn main() {
         }
     }
 
-    // Round small values in the inverse matrix using a tolerance of 1e-6
     round_small_values(&mut inverse, 1e-6);
 
-    // Display inverse matrix
     println!("Inverse Matrix:");
     for row in &inverse {
         println!("{:?}", row);
     }
 
-    // Verify if A * Ainv = Identity Matrix
     let mut result = vec![vec![0.0; size]; size];
     for i in 0..size {
         for j in 0..size {
@@ -128,10 +115,8 @@ fn main() {
         }
     }
 
-    // Round small values in the result matrix
     round_small_values(&mut result, 1e-6);
 
-    // Display Matrix * Inverse result
     println!("Matrix * Inverse = Identity Matrix:");
     for row in &result {
         println!("{:?}", row);
