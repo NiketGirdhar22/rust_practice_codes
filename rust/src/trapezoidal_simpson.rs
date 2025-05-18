@@ -47,7 +47,7 @@ fn main() {
     println!("Enter the function f(x): ");
     let mut func_str = String::new();
     io::stdin().read_line(&mut func_str).unwrap();
-    let func_str = func_str.trim();=
+    let func_str = func_str.trim();
 
     let expr: Expr = match func_str.parse() {
         Ok(e) => e,
