@@ -127,9 +127,8 @@
 </details>
 
 
-2. 
 <details>
-<summary>Classes Program 2 (Copy contents of inputfile to outputfile)</summary>
+<summary><b>Classes Program 2 (Copy contents of inputfile to outputfile)</b></summary>
 
 
 1. Take in arguments from command line : input file and output file.
@@ -221,9 +220,9 @@
 </details>
 
 
-3. 
+
 <details>
-<summary>Classes Program SunEarth (Orbital motion under Newtonian gravity using Euler's method)</summary>
+<summary><b>Classes Program SunEarth (Orbital motion under Newtonian gravity using Euler's method)</b></summary>
 
 
 1. Initialize the parameters
@@ -391,9 +390,9 @@
 </details>
 
 
-4. 
+
 <details>
-<summary>Eigen Values for a square</summary>
+<summary><b>Eigen Values for a square</b></summary>
 
 
 1. Read input matrix of size n from user ( A matrix )
@@ -583,9 +582,9 @@
 </details>
 
 
-5. 
+
 <details>
-<summary>RootSearching</summary>
+<summary><b>RootSearching</b></summary>
 
 Methods:
     - Bisection Method
@@ -795,9 +794,9 @@ Methods:
 </details>
 
 
-6. 
+
 <details>
-<summary>Linear Algebra program1 (LU Decomposition)</summary>
+<summary><b>Linear Algebra program1 (LU Decomposition)</b></summary>
 
 
 1. Decompose matrix A into lower triangular matrix L and Upper triangular matrix U using Doolittle's Method (A = L.U)
@@ -1034,9 +1033,9 @@ Methods:
 </details>
 
 
-7. 
+
 <details>
-<summary>MCIntro_program1 (Monte Carlo Integration)</summary>
+<summary><b>MCIntro_program1 (Monte Carlo Integration)</b></summary>
 
 
 1. Initialize a seed with current timestamp
@@ -1142,9 +1141,9 @@ Methods:
 </details>
 
 
-8. 
+
 <details>
-<summary>MCIntro_program2 (1D random walk)</summary>
+<summary><b>MCIntro_program2 (1D random walk)</b></summary>
 
 
 1. Read arguments from command line for filename and nl = n(starting level)
@@ -1253,9 +1252,9 @@ Methods:
 </details>
 
 
-9. 
+
 <details>
-<summary>MCIntro_program3 (Monte Carlo simulation of radioactive decay)</summary>
+<summary><b>MCIntro_program3 (Monte Carlo simulation of radioactive decay)</b></summary>
 
 
 1. Initialize simulation parameters
@@ -1412,9 +1411,9 @@ Methods:
 </details>
 
 
-10. 
+
 <details>
-<summary>MCIntro_program4 (Monte Carlo integration)</summary>
+<summary><b>MCIntro_program4 (Monte Carlo integration)</b></summary>
 
 -   <details>
     <summary>RUST implementation</summary>
@@ -1535,9 +1534,9 @@ Methods:
 </details>
 
 
-11. 
+
 <details>
-<summary>Fourth order Runge-Kutta method</summary>
+<summary><b>Fourth order Runge-Kutta method</b></summary>
 
 
 1. Take user input for f(x,y), x0, y0, h
@@ -1664,9 +1663,9 @@ Methods:
 </details>
 
 
-12. 
+
 <details>
-<summary>Numerical Integration using Trapezoidal and Simpson's rules</summary>
+<summary><b>Numerical Integration using Trapezoidal and Simpson's rules</b></summary>
 
 
 -   <details>
