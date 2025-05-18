@@ -2,7 +2,7 @@
 
 
 <details>
-<summary>**Classes Program 1 (2nd derivative of e^x)**</summary>
+<summary><b>Classes Program 1 (2nd derivative of e^x)</b></summary>
 
 
 1. Input parameters : h(initial step size), x(point of eval), n (number of steps, halves of h)
