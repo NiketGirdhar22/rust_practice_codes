@@ -13,7 +13,11 @@ fn montecarlo(num_particles: usize, max_time: usize, decay_prob: f64, seed: &mut
     let mut result = vec![0; max_time + 1];
     let mut remaining = num_particles;
     result[0] = remaining;
-    for t in 1..max_time {
+    for t in 1..=max_time {
+        if remaining == 0 {
+            result[t] = 0;
+            continue;
+        }
         let mut decayed = 0;
         for _ in 0..remaining {
             if simple_rand(seed) <= decay_prob {
@@ -22,9 +26,6 @@ fn montecarlo(num_particles: usize, max_time: usize, decay_prob: f64, seed: &mut
         }
         remaining = remaining.saturating_sub(decayed);
         result[t] = remaining;
-        if remaining == 0 {
-            break;
-        }
     }
     result
 }
@@ -55,7 +56,7 @@ fn main() {
         }
     }
     for val in total {
-        writeln!(writer, "{:E}", val as f64 / num_cycles as f64).unwrap();
+        writeln!(writer, "{:.6e}", val as f64 / num_cycles as f64).unwrap();
     }
     println!("Simulation complete. Results written to {}", filename);
 }
