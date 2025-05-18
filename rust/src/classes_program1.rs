@@ -1,6 +1,5 @@
 use std::fs::File;
 use std::io::{self, Write, BufRead};
-use std::f64::consts::E;
 
 use std::f64;
 

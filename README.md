@@ -1,7 +1,17 @@
 # RUST / Python code implementation
 
+1. 
 <details>
 <summary>Classes Program 1 (2nd derivative of e^x)</summary>
+
+1. Input parameters : h(initial step size), x(point of eval), n (number of steps, halves of h)
+2. 2 lists created : for step sizes and for corresponding values of second derivatives
+3. For n iterations:
+    - Compute derivative by cntral difference formula
+    - Append  h and approximation to the corresponding lists
+    - Half h for next iteration
+4. Calculate error by computing true value and for each approximation compute relative error
+5. Write step size and relative error to file
 
 -   <details>
     <summary>RUST implementation</summary>
@@ -56,9 +66,15 @@
         Ok(())
     }
     </code></pre>
+
+    ### Output
+
+    ![Code run](outputs/rust/classes_program1_1.png)
+    ![Output file](outputs/rust/classes_program1_2.png)
+
     </details>
 
- -  <details>
+-   <details>
     <summary>Python implementation</summary>
     <pre><code class="language-python">
     def factorial(n):
@@ -98,6 +114,12 @@
     write_output(h_steps, computed, x)
     print("Results written to out.dat")
     </code></pre>
+
+    ### Output
+
+    ![Code run](outputs/python/classes_program1_1.png)
+    ![Output file](outputs/python/classes_program1_2.png)
+    
     </details>
 
 
